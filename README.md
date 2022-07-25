@@ -24,7 +24,7 @@
 ## Deployed Page
 Visit our published Ideabox application! [here](https://mr-daniels-2025.github.io/Ideabox/)
 ## Possible Future Extensions
-  
+
 ## Set Up
 1. Fork this repo
 2. Clone the repo to your local machine
@@ -34,7 +34,7 @@ Visit our published Ideabox application! [here](https://mr-daniels-2025.github.i
   -[YouTube]
   - [W3Schools]
 ## Contributors
-##LinkeIn Profiles
+##LinkedIn Profiles
 
 Hunter Monroe: https://www.linkedin.com/in/hunter-monroe-035ab0188/
 
