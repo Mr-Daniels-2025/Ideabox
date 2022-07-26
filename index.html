@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./styles.css">
-    <title>Ideabox</title>
-  </head>
 
-  <body>
-    <main>
-      <aside class="navbar">
-        <h1>IdeaBox</h1>
-        <hr>
-        <h4>Filter Starred Ideas</h4>
-        <button type="button" name="button">Show Starred Ideas</button>
-        <hr>
-      </aside>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Ideabox</title>
+</head>
+
+<body>
+  <main class="main-container">
+    <aside class="navbar">
+      <h1>IdeaBox</h1>
+      <hr>
+      <h4>Filter Starred Ideas</h4>
+      <button type="button" name="button">Show Starred Ideas</button>
+      <hr>
+    </aside>
+
+    <section>
       <section class="form-container">
         <form class="form-box" action="index.html" method="post">
-          <label for="">Title</label>
-          <input type="text" name="" value="">
+          <label for="">Title </label>
+          <input class="input1" type="text" name="" value="">
+
           <label for="">Body</label>
           <input type="text" name="" value="">
           <button type="button" name="button">Save</button>
           <input type="text" name="" value="Search Ideas">
-
         </form>
       </section>
-      <section class ="idea-box-container">
+
+      <section class="idea-box-container">
         <article class="mini-idea-box">
           <header></header>
           <h1 class="mini-box-h1"></h1>
           <p>Lorem ipsum</p>
           <section>
-            <img src="./assets/comment.svg" alt="">
+            <img class="comment-img" src="./assets/comment.svg" alt="">
             <label for="">Comment</label>
           </section>
         </article>
-
       </section>
-    </main>
-  </body>
+
+    </section>
+  </main>
+</body>
 </html>

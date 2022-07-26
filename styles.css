@@ -1,0 +1,43 @@
+*{
+  border: 1px solid;
+}
+.navbar{
+  width: 50vh;
+}
+.main-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+
+
+
+}
+.form-container {
+
+}
+.form-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 120vh;
+  height: 40vh;
+}
+
+.form-box label {
+  position: relative;
+  text-align: left;
+  width: 40px;
+  right: 3.5rem;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+
+.comment-img{
+  width: 30px;
+}
+
+.idea-box-container{
+  height: 60vh;
+}
