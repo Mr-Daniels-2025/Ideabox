@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Open%20Sans" rel='stylesheet'>
   <title>Ideabox</title>
 </head>
 
@@ -13,7 +14,7 @@
       <h1>IdeaBox</h1>
       <hr>
       <h4>Filter Starred Ideas</h4>
-      <button type="button" name="button">Show Starred Ideas</button>
+      <button class="show-ideas" type="button" name="button">Show Starred Ideas</button>
       <hr>
     </aside>
 
@@ -25,23 +26,23 @@
           <label for=""> <h1> Body </h1> </label>
           <input class="body-input"type="text" name="" value="">
           <button class="save-button" type="button" name="button"> Save </button>
-        <label class="searchimg-section" for=""><img class="search-img" src="assets/search.svg" alt=""> <input class="search-input" type="text" name="" value="Search Ideas"> </label>
-
+          <label class="searchimg-section" for=""><img class="search-img" src="assets/search.svg" alt=""> <input class="search-input" type="text" name="" value="Search Ideas"> </label>
         </form>
       </section>
 
       <section class="idea-box-container">
         <article class="mini-idea-box">
-          <header></header>
-          <h1 class="mini-box-h1"></h1>
-          <p>Lorem ipsum</p>
-          <section>
+          <header class="header-mini-box"> <img class="star" src="./assets/star.svg" alt="star"> <img class="delete" src="./assets/delete.svg" alt=""> </header>
+          <section class="mini-body-content">
+            <h1>Idea Tile </h1>
+            <p> Duis eu congue mi. Donec bibendum sodales viverra. Etiam scelerisque tellus a turpis tincidunt fringilla.</p>
+          </section>
+          <section class="comment-section">
             <img class="comment-img" src="./assets/comment.svg" alt="">
-            <label for="">Comment</label>
+            <h5 for="">Comment</h5>
           </section>
         </article>
       </section>
-
     </section>
   </main>
 </body>
