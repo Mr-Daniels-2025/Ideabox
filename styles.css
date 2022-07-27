@@ -1,43 +1,80 @@
 *{
-  border: 1px solid;
+  margin: 0;
+
 }
+/* navbar */
 .navbar{
-  width: 50vh;
+  width:30vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+.navbar h1, .navbar h4 {
+  margin: 10px;
+}
+.navbar button{
+  margin: 10px 10px 10px 10px;
+  padding: 15px;
+  font-weight: bolder;
+  font-size: 1.6em;
+}
+
+
+/*  main content   */
 .main-container {
   display: flex;
   flex-direction: row;
   height: 100vh;
-
-
-
+  width:100vw ;
+  border-color: red;
+  margin: 0;
 }
-.form-container {
-
-}
-.form-box{
+.main-content-section {
+  border:  red  solid;
+  width: 75vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 120vh;
-  height: 40vh;
+}
+/* form boxs */
+.form-box{
+  margin-top: 10%;;
+  width: 50vh
+}
+ .title-input, .save-button,.save-button, .body-input {
+   width: 400px;
+   height: 40px;
+   margin-bottom: 20px;
+ }
+ .body-input{
+   height: 80px;
+ }
+.save-button{
+  width: 405px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+.search-img{
+  width: 25px;
+  height: 26px;
+  background-color: #1f1f3d;
+  padding: 10px;
+}
+.search-input{
+  width: 354px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+.searchimg-section{
+  display: flex;
 }
 
-.form-box label {
-  position: relative;
-  text-align: left;
-  width: 40px;
-  right: 3.5rem;
-  margin-top: 10px;
-  margin-bottom: 8px;
-}
 
-
-.comment-img{
-  width: 30px;
-}
-
+/*saved ideas section*/
 .idea-box-container{
-  height: 60vh;
+  width: 75vw;
+  height: 65vh;
+  border: blue solid;
 }
