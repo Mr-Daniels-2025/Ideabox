@@ -1,11 +1,11 @@
-// form inputs
-var formTitle = document.querySelector(".title-input")
-var formBody = document.querySelector(".body-input")
-var searchBar = document.querySelector(".search-input")
+// formInputs
+var formTitle = document.querySelector("#form-title")
+var formBody = document.querySelector("#form-body")
+var searchBar = document.querySelector("#form-search")
 
 // buttons
-var showStarredButton = document.querySelector(".show-ideas")
-var saveButton = document.querySelector(".show-ideas")
-var searchButton = document.querySelector(".search-img")
+var showStarredButton = document.querySelector("#show-ideas-button")
+var saveButton = document.querySelector("#form-saved")
+var searchButton = document.querySelector("#search-button")
 
 var userIdeas = []
