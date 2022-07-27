@@ -1,43 +1,49 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./styles.css">
-    <title>Ideabox</title>
-  </head>
 
-  <body>
-    <main>
-      <aside class="navbar">
-        <h1>IdeaBox</h1>
-        <hr>
-        <h4>Filter Starred Ideas</h4>
-        <button type="button" name="button">Show Starred Ideas</button>
-        <hr>
-      </aside>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Open%20Sans" rel='stylesheet'>
+  <title>Ideabox</title>
+</head>
+
+<body>
+  <main class="main-container">
+    <aside class="navbar">
+      <h1>IdeaBox</h1>
+      <hr>
+      <h4>Filter Starred Ideas</h4>
+      <button class="show-ideas" type="button" name="button">Show Starred Ideas</button>
+      <hr>
+    </aside>
+
+    <section class ="main-content-section">
       <section class="form-container">
         <form class="form-box" action="index.html" method="post">
-          <label for="">Title</label>
-          <input type="text" name="" value="">
-          <label for="">Body</label>
-          <input type="text" name="" value="">
-          <button type="button" name="button">Save</button>
-          <input type="text" name="" value="Search Ideas">
-
+          <label for=""> <h1> Title </h1> </label>
+          <input class="title-input" type="text" name="" value="">
+          <label for=""> <h1> Body </h1> </label>
+          <input class="body-input"type="text" name="" value="">
+          <button class="save-button" type="button" name="button"> Save </button>
+          <label class="searchimg-section" for=""><img class="search-img" src="assets/search.svg" alt=""> <input class="search-input" type="text" name="" value="Search Ideas"> </label>
         </form>
       </section>
-      <section class ="idea-box-container">
+
+      <section class="idea-box-container">
         <article class="mini-idea-box">
-          <header></header>
-          <h1 class="mini-box-h1"></h1>
-          <p>Lorem ipsum</p>
-          <section>
-            <img src="./assets/comment.svg" alt="">
-            <label for="">Comment</label>
+          <header class="header-mini-box"> <img class="star" src="./assets/star.svg" alt="star"> <img class="delete" src="./assets/delete.svg" alt=""> </header>
+          <section class="mini-body-content">
+            <h1>Idea Tile </h1>
+            <p> Duis eu congue mi. Donec bibendum sodales viverra. Etiam scelerisque tellus a turpis tincidunt fringilla.</p>
+          </section>
+          <section class="comment-section">
+            <img class="comment-img" src="./assets/comment.svg" alt="">
+            <h5 for="">Comment</h5>
           </section>
         </article>
-
       </section>
-    </main>
-  </body>
+    </section>
+  </main>
+</body>
 </html>

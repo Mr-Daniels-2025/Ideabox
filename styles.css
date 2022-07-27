@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+}
+
+/* navbar */
+.navbar {
+  font-family: "Open Sans, bold";
+  background-color: #1f1f3d;
+  width: 30vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar h1, .navbar h4 {
+  margin-left: 20px;
+  margin-bottom: 20px;
+
+}
+
+.navbar h1 {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 20px;
+  color: #e9e9f3;
+}
+
+.navbar h4 {
+  color: #bfbfdd;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+hr {
+  border-width: 3px;
+  border-color: #353567;
+}
+
+.show-ideas {
+  color: #e9e9f3;
+  background-color: #5356a4;
+  margin: 10px 10px 10px 10px;
+  padding: 15px;
+  font-weight: bolder;
+  font-size: 1.6em;
+}
+
+/*  main content   */
+.main-content-section {
+  width: 80vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-container {
+  background-color: #a9aad2;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+/* form boxs */
+.form-box {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-self: baseline;
+  width: 100%;
+}
+
+/* form innner content css */
+.title-input, .save-button, .save-button, .body-input {
+  width: 400px;
+  height: 40px;
+  margin-bottom: 20px;
+  border: 2.5px solid;
+  border-color: #5356a4;
+}
+.form-box h1{
+
+  font-family: "Open Sans, light";
+  color: #5356a4;
+}
+.body-input {
+  height: 80px;
+}
+
+.save-button {
+  width: 407px;
+  font-weight: bolder;
+  font-size: 20px;
+  color: #e9e9f3;
+  background-color: #35356c;
+}
+
+.search-img {
+  width: 24px;
+  height: 22px;
+  background-color: #35356c;
+  padding: 10px;
+  border: 2.5px solid;
+  border-right: none;
+  border-color: #5356a4;
+}
+
+.search-input {
+  width: 345px;
+  height: 40px;
+  margin-bottom: 20px;
+  border: 2.5px solid;
+  border-color: #5356a4;
+  color: #a9aad2;
+  padding-left:10px;
+}
+
+.searchimg-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*saved ideas section*/
+.idea-box-container {
+  background-color: #eaeaf4;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 75vw;
+  height: 65vh;
+
+}
+
+.comment-img, .star, .delete {
+  width: 35px;
+}
+/* mini-boxes css */
+.mini-idea-box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  width: 300px;
+  height: 340px;
+  background-color: green;
+  justify-content: space-between;
+  margin-top: 20px;
+  background-color: #fff;
+  border: #1f1f3d solid;
+}
+
+/*add css to innerhtml of mini-box */
+.header-mini-box {
+  border-bottom: #1f1f3d solid;
+  display: flex;
+  justify-content: space-between;
+  background-color: #1f1f3d;
+}
+
+.header-mini-box, .comment-section {
+  display: flex;
+  align-items: center;
+}
+.mini-body-content h1 {
+  margin-bottom: 20px;
+  margin-top: 5px;
+  color: #1f1f3d;
+}
+
+.mini-body-content {
+  margin-bottom: 15px;
+}
+
+
+.comment-section h5 {
+  font-size: 16px;
+  color: #e9e9f3;
+}
+
+.comment-section {
+  border-top: #1f1f3d solid;
+  background-color: #5356A4;
+}
+
+.mini-body-content {
+  font-size: 24px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
