@@ -1,3 +1,6 @@
+//global variable
+var userIdeas = []
+
 // formInputs
 var titleBody = document.getElementById('title-body')
 var formTitle = document.querySelector("#form-title")
@@ -10,8 +13,7 @@ var showStarredButton = document.querySelector("#show-ideas-button")
 var saveButton = document.querySelector("#form-save")
 var searchButton = document.querySelector("#search-button")
 
-//global variable
-var userIdeas = []
+
 //disableButton()
 // event listener
 window.addEventListener('load', disableButton)
@@ -49,7 +51,7 @@ function clearForm() {
 }
 
 function disableButton() {
-  if (formTitle.value === "" && formBody.value === "") {
+  if (formTitle.value === "" && formBody.value === "" || formTitle.value !== "" && formBody.value === "" || formTitle.value === "" && formBody.value !== "") {
     saveButton.classList.add("lighter-color")
     saveButton.disabled = true
   } else {
