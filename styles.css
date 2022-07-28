@@ -97,6 +97,10 @@ hr {
   color: #e9e9f3;
   background-color: #35356c;
 }
+.save-button:hover{
+  cursor: pointer;
+
+}
 
 .search-img {
   width: 24px;
@@ -197,4 +201,9 @@ hr {
   font-size: 20px;
   color: #e9e9f3;
   background-color: #8181ca;
+}
+
+.lighter-color:hover {
+  cursor: default;
+
 }
