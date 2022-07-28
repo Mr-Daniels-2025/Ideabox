@@ -11,7 +11,7 @@ var searchButton = document.querySelector("#search-button")
 
 //global variable
 var userIdeas = []
-
+//disableButton()
 // event listener
 saveButton.addEventListener('click', saveIdea)
 
@@ -32,5 +32,24 @@ function saveIdea(){
         <h5 for="">Comment</h5>
       </section>
     </article>`
+
   }
+  clearForm()
 }
+  function clearForm(){
+    formTitle.value = ""
+    formBody.value = ""
+//    saveButton.disabled = true
+  }
+
+  function disableButton(){
+    if (formTitle.value === "" || formBody.value === ""){
+      console.log("Hello");
+      saveButton.disabled = true
+
+    } else {
+      saveButton.disabled = false
+
+    }
+
+  }
