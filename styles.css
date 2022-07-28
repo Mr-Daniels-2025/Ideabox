@@ -82,7 +82,7 @@ hr {
   border-color: #5356a4;
 }
 .form-box h1{
-
+  align-self: baseline;
   font-family: "Open Sans, light";
   color: #5356a4;
 }
@@ -96,6 +96,10 @@ hr {
   font-size: 20px;
   color: #e9e9f3;
   background-color: #35356c;
+}
+.save-button:hover{
+  cursor: pointer;
+
 }
 
 .search-img {
@@ -174,7 +178,6 @@ hr {
   margin-bottom: 15px;
 }
 
-
 .comment-section h5 {
   font-size: 16px;
   color: #e9e9f3;
@@ -189,4 +192,18 @@ hr {
   font-size: 24px;
   margin-left: 15px;
   margin-right: 15px;
+}
+
+/* js css */
+.lighter-color {
+  width: 407px;
+  font-weight: bolder;
+  font-size: 20px;
+  color: #e9e9f3;
+  background-color: #8181ca;
+}
+
+.lighter-color:hover {
+  cursor: default;
+
 }
