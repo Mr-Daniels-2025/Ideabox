@@ -87,31 +87,32 @@ function deleteIdea(event) {
 
 
 //Working on this section below:
-function favoritedIdeas(){
-  if (userIdeas.isStarred === true) {
-    // favoriteIdeas.push(userIdeas)
-  }
-}
 
-//to look into the variable we are targeting here
+
+
 // miniIdeaBox.addEventListener("click", activateStar);
 miniIdeaBox.addEventListener("click", activateStar);
 
-function activateStar(){
-  console.log(userIdeas[0].isStarred)
+function activateStar() {
   newIdea.updateIdea()
-  //if star is clicked do something/update color of star
-  //when color is changed to red update isStarred value to true
-  //update the favoritedIdeas array to include the isStarred true values
-  for(var i = 0; i < userIdeas.length; i++){
-  if(event.target.classList.contains("star")) {
-    if(userIdeas[i].isStarred === true){
-    event.target.src = redStar
-    favoriteIdeas.push(userIdeas)
-  } else {
-    event.target.src = whiteStar
-    favoriteIdeas.splice
+  for (var i = 0; i < userIdeas.length; i++) {
+    if (event.target.classList.contains("star")) {
+      if (userIdeas[i].isStarred === true) {
+        event.target.src = redStar
+        favoriteIdeas.push(userIdeas)
+      } else {
+        event.target.src = whiteStar
+      }
+    }
   }
 }
-}
-}
+
+function deleteFavoritedIdeas(event) {
+  var id = parseInt(event.target.id)
+  if (event.target.classList.contains("star")){
+  for (var i = 0; i < favoriteIdeas.length; i++)
+    if (favoriteIdeas[i].id === userIdeas.id) {
+      console.log('im working')
+      favoriteIdeas.splice(i, 1)
+    }
+}}
