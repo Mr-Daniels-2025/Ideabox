@@ -35,7 +35,7 @@ function saveIdea() {
     miniIdeaBox.innerHTML += `
   <article class="mini-idea-box" id="">
     <header class="header-mini-box">
-    <img class="star" src="${whiteStar}" alt="star">
+    <img class="star" id="${userIdeas[i].id}" src="${whiteStar}" alt="star">
     <img id="${userIdeas[i].id}" class="delete" src="./assets/delete.svg" alt="">
     </header>
     <section class="mini-body-content">
@@ -74,17 +74,17 @@ miniIdeaBox.addEventListener("click", deleteIdea);
 
 function deleteIdea(event) {
   var id = parseInt(event.target.id);
-    if(event.target.classList.contains("delete")) {
-      for (var i = 0; i < userIdeas.length; i++) {
-        if(userIdeas[i].id === id) {
-          userIdeas.splice(i, 1);
-          //miniIdeaBox.innerHTML = "";
-        }
-        event.target.closest(".mini-idea-box").remove();
+  if (event.target.classList.contains("delete")) {
+    for (var i = 0; i < userIdeas.length; i++) {
+      if (userIdeas[i].id === id) {
+        userIdeas.splice(i, 1);
+        //miniIdeaBox.innerHTML = "";
       }
+      event.target.closest(".mini-idea-box").remove();
     }
+  }
 }
-
+//sadasd
 
 //Working on this section below:
 
@@ -94,14 +94,28 @@ function deleteIdea(event) {
 miniIdeaBox.addEventListener("click", activateStar);
 
 function activateStar() {
-  newIdea.updateIdea()
-  for (var i = 0; i < userIdeas.length; i++) {
-    if (event.target.classList.contains("star")) {
-      if (userIdeas[i].isStarred === true) {
-        event.target.src = redStar
-        favoriteIdeas.push(userIdeas)
+  var id = parseInt(event.target.id);
+  if (event.target.classList.contains("star")) {
+    console.log("star clicked");
+    for (var i = 0; i < userIdeas.length; i++) {
+      console.log("in the loop");
+      if (userIdeas[i].isStarred === false) {
+        console.log("isStarted ==== true");
+        console.log("userid", userIdeas[i].id);
+        console.log(id);
+        if (favoriteIdeas[i[id]] !== userIdeas[i].id) {
+          newIdea.updateIdea()
+          console.log("is in array", favoriteIdeas[i[id]] !== userIdeas[i].id);
+          console.log("pushing");
+          event.target.src = redStar
+          favoriteIdeas.push(userIdeas)
+        }
       } else {
         event.target.src = whiteStar
+        console.log('splice');
+        newIdea.updateIdea()
+        favoriteIdeas.splice(i, 1);
+
       }
     }
   }
@@ -109,10 +123,11 @@ function activateStar() {
 
 function deleteFavoritedIdeas(event) {
   var id = parseInt(event.target.id)
-  if (event.target.classList.contains("star")){
-  for (var i = 0; i < favoriteIdeas.length; i++)
-    if (favoriteIdeas[i].id === userIdeas.id) {
-      console.log('im working')
-      favoriteIdeas.splice(i, 1)
-    }
-}}
+  if (event.target.classList.contains("star")) {
+    for (var i = 0; i < favoriteIdeas.length; i++)
+      if (favoriteIdeas[i].id === userIdeas.id) {
+        console.log('im working')
+        favoriteIdeas.splice(i, 1)
+      }
+  }
+}
