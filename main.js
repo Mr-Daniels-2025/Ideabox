@@ -26,7 +26,7 @@ function saveIdea() {
   miniIdeaBox.innerHTML = ''
   for (var i = 0; i < userIdeas.length; i++) {
     miniIdeaBox.innerHTML += `
-  <article class="mini-idea-box">
+  <article class="mini-idea-box" id="${userIdeas[i].id}">
     <header class="header-mini-box"> <img class="star" src="./assets/star.svg" alt="star"> <img class="delete" src="./assets/delete.svg" alt=""> </header>
     <section class="mini-body-content">
       <h1>${userIdeas[i].title}</h1>
@@ -61,4 +61,36 @@ function disableButton() {
 
   }
 
+}
+
+miniIdeaBox.addEventListener("click", deleteIdea);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//need to fix splice
+function deleteIdea() {
+    if(event.target.classList.contains("delete")) {
+      for (var i = 0; i < userIdeas.length; i++) {
+        if(event.target.closest(".mini-idea-box").id === userIdeas[i].id) {
+          userIdeas.splice(i, 1);
+          //miniIdeaBox.innerHTML = "";
+        }
+        event.target.closest(".mini-idea-box").remove();
+      }
+    }
 }
