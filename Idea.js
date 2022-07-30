@@ -5,10 +5,17 @@ class Idea{
     this.body = body
     this.isStarred = false
   }
-
+  updateIdea(){
+  // use the updated svg logic to change the boolean value
+    if (!this.isStarred) {
+      this.isStarred = true
+  } else {
+    this.isStarred = false
+  }
+}
 }
 
-function inputValues(){
-  var newIdea = new Idea(formTitle.value, formBody.value)
-  userIdeas.push(newIdea)
-}
+// function inputValues(){
+//   var newIdea = new Idea(formTitle.value, formBody.value)
+//   userIdeas.push(newIdea)
+// }
