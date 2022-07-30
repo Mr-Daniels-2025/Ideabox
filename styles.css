@@ -137,7 +137,7 @@ hr {
 
 }
 
-.comment-img, .star, .delete {
+.comment-img, .star, .delete, .star-active{
   width: 35px;
 }
 /* mini-boxes css */
@@ -201,5 +201,10 @@ hr {
 
 .lighter-color:hover {
   cursor: default;
+}
 
+.hidden {
+  visibility: hidden;
+  width: 0;
+  height: 0;
 }
