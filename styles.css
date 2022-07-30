@@ -202,9 +202,3 @@ hr {
 .lighter-color:hover {
   cursor: default;
 }
-
-.hidden {
-  visibility: hidden;
-  width: 0;
-  height: 0;
-}
