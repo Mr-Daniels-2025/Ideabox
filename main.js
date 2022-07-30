@@ -103,7 +103,7 @@ function activateStar(){
   //if star is clicked do something/update color of star
   //when color is changed to red update isStarred value to true
   //update the favoritedIdeas array to include the isStarred true values
-  
+  for(var i = 0; i < userIdeas.length; i++){
   if(event.target.classList.contains("star")) {
     if(userIdeas[i].isStarred === true){
     event.target.src = redStar
@@ -112,5 +112,6 @@ function activateStar(){
     event.target.src = whiteStar
     favoriteIdeas.splice
   }
+}
 }
 }
