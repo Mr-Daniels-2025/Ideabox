@@ -98,13 +98,19 @@ function favoritedIdeas(){
 miniIdeaBox.addEventListener("click", activateStar);
 
 function activateStar(){
+  console.log(userIdeas[0].isStarred)
   newIdea.updateIdea()
   //if star is clicked do something/update color of star
   //when color is changed to red update isStarred value to true
   //update the favoritedIdeas array to include the isStarred true values
+  
   if(event.target.classList.contains("star")) {
+    if(userIdeas[i].isStarred === true){
     event.target.src = redStar
-
     favoriteIdeas.push(userIdeas)
+  } else {
+    event.target.src = whiteStar
+    favoriteIdeas.splice
+  }
 }
 }
