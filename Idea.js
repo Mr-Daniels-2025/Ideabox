@@ -9,6 +9,6 @@ class Idea{
 }
 
 function inputValues(){
-  newIdea = new Idea(formTitle.value, formBody.value)
+  var newIdea = new Idea(formTitle.value, formBody.value)
   userIdeas.push(newIdea)
 }
