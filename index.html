@@ -9,31 +9,30 @@
 </head>
 
 <body>
+  <aside class="navbar">
+    <h1>IdeaBox</h1>
+    <hr>
+    <h4>Filter Starred Ideas</h4>
+    <button id="show-ideas-button" class="show-ideas" type="button" name="button">Show Starred Ideas</button>
+    <hr>
+  </aside>
   <main class="main-container">
-    <aside class="navbar">
-      <h1>IdeaBox</h1>
-      <hr>
-      <h4>Filter Starred Ideas</h4>
-      <button id="show-ideas-button" class="show-ideas" type="button" name="button">Show Starred Ideas</button>
-      <hr>
-    </aside>
-    <section class ="main-content-section">
-      <section class="form-container">
+    <section class="main-content-section">
         <form id="title-body" class="form-box" action="index.html" method="post">
           <h1> Title </h1>
-          <input id="form-title"class="title-input" type="text" name="" value="">
+          <input id="form-title" class="title-input" type="text" name="" value="">
           <h1> Body </h1>
-          <input id="form-body"class="body-input"type="text" name="" value="">
-          <button id="form-save"class="save-button" type="button" name="button"> Save </button>
-          <label class="searchimg-section" for=""><img id="search-button"class="search-img" src="assets/search.svg" alt="">
-          <input id="form-search"class="search-input" type="text" name="" value="Search Ideas"> </label>
+          <input id="form-body" class="body-input" type="text" name="" value="">
+          <button id="form-save" class="save-button" type="button" name="button"> Save </button>
+          <label class="searchimg-section" for=""><img id="search-button" class="search-img" src="assets/search.svg" alt="">
+            <input id="form-search" class="search-input" type="text" name="" value="Search Ideas"> </label>
         </form>
-      </section>
-      <section id="mini-idea-innerhtml" class="idea-box-container">
-      </section>
+    </section>
+    <section id="mini-idea-innerhtml" class="idea-box-container">
     </section>
   </main>
-    <script src="Idea.js"></script>
-    <script src="main.js"></script>
+  <script src="Idea.js"></script>
+  <script src="main.js"></script>
 </body>
+
 </html>
