@@ -1,6 +1,9 @@
 //global variable
 var userIdeas = []
 var favoriteIdeas = []
+var whiteStar = "./assets/star.svg"
+var redStar = "./assets/star-active.svg"
+
 
 // formInputs
 var titleBody = document.getElementById('title-body')
@@ -14,9 +17,7 @@ var showStarredButton = document.querySelector("#show-ideas-button")
 var saveButton = document.querySelector("#form-save")
 var searchButton = document.querySelector("#search-button")
 
-
-
-
+var newIdea;
 
 //disableButton()
 // event listener
@@ -26,13 +27,15 @@ titleBody.addEventListener('input', disableButton);
 
 //functions
 function saveIdea() {
-  inputValues()
+  //inputValues()
+  newIdea = new Idea(formTitle.value, formBody.value)
+  userIdeas.push(newIdea)
   miniIdeaBox.innerHTML = ''
   for (var i = 0; i < userIdeas.length; i++) {
     miniIdeaBox.innerHTML += `
-  <article class="mini-idea-box" id="${userIdeas[i].id}">
+  <article class="mini-idea-box" id="">
     <header class="header-mini-box">
-    <img class="star" src="./assets/star.svg" alt="star">
+    <img class="star" src="${whiteStar}" alt="star">
     <img id="${userIdeas[i].id}" class="delete" src="./assets/delete.svg" alt="">
     </header>
     <section class="mini-body-content">
@@ -86,21 +89,22 @@ function deleteIdea(event) {
 //Working on this section below:
 function favoritedIdeas(){
   if (userIdeas.isStarred === true) {
-    favoriteIdeas.push(userIdeas)
+    // favoriteIdeas.push(userIdeas)
   }
 }
 
-var starButtonActive = document.getElementsByClassName("star-active-on-click")
-var starButtonInActive = document.getElementsByClassName("star-inactive-on-click")
 //to look into the variable we are targeting here
 // miniIdeaBox.addEventListener("click", activateStar);
 miniIdeaBox.addEventListener("click", activateStar);
 
 function activateStar(){
-  userIdeas.isStarred = true
+  newIdea.updateIdea()
+  //if star is clicked do something/update color of star
+  //when color is changed to red update isStarred value to true
+  //update the favoritedIdeas array to include the isStarred true values
   if(event.target.classList.contains("star")) {
-    // alert("debug")
-    starButtonInActive.classList.add("hidden")
-    starButtonActive.classList.remove("hidden")
+    event.target.src = redStar
+
+    favoriteIdeas.push(userIdeas)
 }
 }
