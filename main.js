@@ -1,5 +1,6 @@
 //global variable
 var userIdeas = []
+var favoriteIdeas = []
 
 // formInputs
 var titleBody = document.getElementById('title-body')
@@ -64,9 +65,18 @@ function disableButton() {
 }
 
 miniIdeaBox.addEventListener("click", deleteIdea);
+miniIdeaBox.addEventListener("click", activateStar);
 
+function favoritedIdeas(){
+  if (userIdeas.isStarred === true) {
+    favoriteIdeas.push(userIdeas)
+  }
+}
 
+//create query
+function activateStar(){
 
+}
 
 
 
