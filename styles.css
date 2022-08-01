@@ -15,7 +15,7 @@ body{
   flex-direction: column;
 }
 
-.navbar h1, .navbar h4 {
+.navbar h1, .navbar h2 {
   margin-left: 20px;
   margin-bottom: 20px;
 
@@ -28,7 +28,7 @@ body{
   color: #e9e9f3;
 }
 
-.navbar h4 {
+.navbar h2 {
   color: #bfbfdd;
   margin-top: 20px;
   margin-left: 20px;
@@ -80,10 +80,12 @@ hr {
   border: 2.5px solid;
   border-color: #5356a4;
 }
-.form-box h1{
+.form-box h3{
   align-self: baseline;
   font-family: "Open Sans, light";
   color: #5356a4;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .body-input {
