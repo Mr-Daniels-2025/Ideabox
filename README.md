@@ -24,7 +24,9 @@
 ## Deployed Page
 Visit our published Ideabox application! [here](https://mr-daniels-2025.github.io/Ideabox/)
 ## Possible Future Extensions
-    Future extensions would allow the user to save and view favorited cards on a separate page; and remove favorited cards from the save-page.  In addition, users would be able to search for a specific, favorited card.
+ - Future extensions would allow the user to save and view favorited cards on a separate page,
+   and remove favorited cards from the save-page.  In addition, users would be able to search
+   for a specific, favorited card.
 ## Set Up
 1. Fork this repo
 2. Clone the repo to your local machine
