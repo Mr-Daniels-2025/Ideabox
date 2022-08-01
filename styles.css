@@ -18,7 +18,6 @@ body{
 .navbar h1, .navbar h2 {
   margin-left: 20px;
   margin-bottom: 20px;
-
 }
 
 .navbar h1 {
@@ -56,6 +55,7 @@ hr {
   justify-content: center;
   align-items: center;
 }
+
 .main-container {
   background-color: #a9aad2;
   display: flex;
@@ -81,6 +81,7 @@ hr {
   border: 2.5px solid;
   border-color: #5356a4;
 }
+
 .form-box h3{
   align-self: baseline;
   font-family: "Open Sans, light";
@@ -100,9 +101,9 @@ hr {
   color: #e9e9f3;
   background-color: #35356c;
 }
+
 .save-button:hover{
   cursor: pointer;
-
 }
 
 .search-img {
@@ -137,12 +138,12 @@ hr {
   justify-content: space-evenly;
   flex-wrap: wrap;
   padding-bottom: 60vh;
-
 }
 
 .comment-img, .star, .delete, .star-active{
   width: 35px;
 }
+
 /* mini-boxes css */
 .mini-idea-box {
   display: flex;
@@ -170,12 +171,14 @@ hr {
   align-items: center;
   width: 300px;
 }
+
 .mini-body-content {
   font-size: 22px;
   margin-left: 0.5vw;
   margin-right: 0.5vw;
   margin-bottom: 15px;
 }
+
 .mini-body-content h1 {
   margin-bottom: 20px;
   margin-top: 5px;
