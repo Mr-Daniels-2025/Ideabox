@@ -26,13 +26,14 @@ body{
   margin-top: 20px;
   margin-left: 20px;
   color: #e9e9f3;
+  font-size: 2vw;
 }
 
 .navbar h2 {
   color: #bfbfdd;
   margin-top: 20px;
   margin-left: 20px;
-  font-size: 18px;
+  font-size: 1.5vw;
 }
 
 hr {
@@ -46,7 +47,7 @@ hr {
   margin: 10px 10px 10px 10px;
   padding: 15px;
   font-weight: bolder;
-  font-size: 1.6em;
+  font-size: 1.5vw;
 }
 
 /*  main content   */
@@ -115,7 +116,7 @@ hr {
 }
 
 .search-input {
-  width: 36.5vw;
+  width: 35.5vw;
   height: 40px;
   margin-bottom: 20px;
   border: 2.5px solid;
