@@ -99,18 +99,14 @@ function activateStar() {
     console.log("star clicked");
     for (var i = 0; i < userIdeas.length; i++) {
       console.log("in the loop");
-      if (userIdeas[i].isStarred === false) {
+      if (userIdeas[i].isStarred === false && userIdeas[i].id === id) {
         console.log("isStarted ==== true");
         console.log("userid", userIdeas[i].id);
         console.log(id);
-        if (favoriteIdeas[i[id]] !== userIdeas[i].id) {
-          newIdea.updateIdea()
-          console.log("is in array", favoriteIdeas[i[id]] !== userIdeas[i].id);
-          console.log("pushing");
-          event.target.src = redStar
-          favoriteIdeas.push(userIdeas)
-        }
-      } else {
+        event.target.src = redStar
+        newIdea.updateIdea()
+        favoriteIdeas.push(userIdeas)
+      } else if (userIdeas[i].isStarred === true && userIdeas[i].id === id){
         event.target.src = whiteStar
         console.log('splice');
         newIdea.updateIdea()
