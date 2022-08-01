@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="./styles.css">
   <link href="https://fonts.googleapis.com/css?family=Open%20Sans" rel='stylesheet'>
   <title>Ideabox</title>
 </head>
-
 <body>
   <aside class="navbar">
     <h1>IdeaBox</h1>
     <hr>
-    <h4>Filter Starred Ideas</h4>
+    <h2>Filter Starred Ideas</h2>
     <button id="show-ideas-button" class="show-ideas" type="button" name="button">Show Starred Ideas</button>
     <hr>
   </aside>
   <main class="main-container">
     <section class="main-content-section">
-        <form id="title-body" class="form-box" action="index.html" method="post">
-          <h1> Title </h1>
-          <input id="form-title" class="title-input" type="text" name="" value="">
-          <h1> Body </h1>
-          <input id="form-body" class="body-input" type="text" name="" value="">
-          <button id="form-save" class="save-button" type="button" name="button"> Save </button>
-          <label class="searchimg-section" for=""><img id="search-button" class="search-img" src="assets/search.svg" alt="">
-            <input id="form-search" class="search-input" type="text" name="" value="Search Ideas"> </label>
-        </form>
+      <form id="title-body" class="form-box" action="index.html" method="post">
+        <h3> Title </h3>
+        <input id="form-title" class="title-input" type="text" name="title">
+        <h3> Body </h3>
+        <input id="form-body" class="body-input" type="text" name="body">
+        <button id="form-save" class="save-button" type="button" name="button"> Save </button>
+        <label class="searchimg-section"><img id="search-button" class="search-img" src="assets/search.svg" alt="">
+          <input id="form-search" class="search-input" type="text" name="search" value="Search Ideas"> </label>
+      </form>
     </section>
     <section id="mini-idea-innerhtml" class="idea-box-container">
     </section>
@@ -34,5 +32,4 @@
   <script src="Idea.js"></script>
   <script src="main.js"></script>
 </body>
-
 </html>
