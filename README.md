@@ -39,7 +39,7 @@ Visit our published Ideabox application! [here](https://mr-daniels-2025.github.i
   - Beth_Wilson
   - Jedeo_Manirikumwenatwe
   - Dan_Daniels
-##LinkedIn Profiles
+## LinkedIn Profiles
 - Hunter Monroe: https://www.linkedin.com/in/hunter-monroe-035ab0188/
 - Beth Wilson: https://www.linkedin.com/in/beth-wilson-92594284/
 - Jedeo Manirikumwenatwe: https://www.linkedin.com/in/jedeo
