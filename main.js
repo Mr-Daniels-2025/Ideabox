@@ -56,7 +56,7 @@ function renderNewIdea(){
 function clearForm() {
   formTitle.value = ""
   formBody.value = ""
-  saveButton.disabled = true;
+  saveButton.disabled = true
   saveButton.classList.add("lighter-color")
 }
 
@@ -73,7 +73,7 @@ function disableButton() {
 }
 
 function deleteIdea(event) {
-  var id = parseInt(event.target.id);
+  var id = parseInt(event.target.id)
   if (event.target.classList.contains("delete")) {
     for (var i = 0; i < userIdeas.length; i++) {
       if (userIdeas[i].id === id) {
@@ -85,7 +85,7 @@ function deleteIdea(event) {
 }
 
 function activateStar() {
-  var id = parseInt(event.target.id);
+  var id = parseInt(event.target.id)
   if (event.target.classList.contains("star")) {
     for (var i = 0; i < userIdeas.length; i++) {
       if (userIdeas[i].isStarred === false && userIdeas[i].id === id) {
