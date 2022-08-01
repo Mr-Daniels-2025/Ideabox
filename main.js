@@ -3,7 +3,7 @@ var userIdeas = []
 var favoriteIdeas = []
 var whiteStar = "./assets/star.svg"
 var redStar = "./assets/star-active.svg"
-
+var newIdea;
 
 // formInputs
 var titleBody = document.getElementById('title-body')
@@ -17,19 +17,22 @@ var showStarredButton = document.querySelector("#show-ideas-button")
 var saveButton = document.querySelector("#form-save")
 var searchButton = document.querySelector("#search-button")
 
-var newIdea;
-
-//disableButton()
 // event listener
 window.addEventListener('load', disableButton)
-saveButton.addEventListener('click', saveIdea)
+saveButton.addEventListener('click', displayIdea)
 titleBody.addEventListener('input', disableButton);
+miniIdeaBox.addEventListener("click", deleteIdea);
+miniIdeaBox.addEventListener("click", activateStar);
 
 //functions
-function saveIdea() {
-  //inputValues()
+function displayIdea() {
   newIdea = new Idea(formTitle.value, formBody.value)
   userIdeas.push(newIdea)
+  renderNewIdea()
+  clearForm()
+}
+
+function renderNewIdea(){
   miniIdeaBox.innerHTML = ''
   for (var i = 0; i < userIdeas.length; i++) {
     miniIdeaBox.innerHTML += `
@@ -48,29 +51,26 @@ function saveIdea() {
     </section>
   </article>`
   }
-  clearForm()
-  saveButton.disabled = true;
-  saveButton.classList.add("lighter-color")
 }
 
 function clearForm() {
   formTitle.value = ""
   formBody.value = ""
-  //    saveButton.disabled = true
+  saveButton.disabled = true;
+  saveButton.classList.add("lighter-color")
 }
 
 function disableButton() {
-  if (formTitle.value === "" && formBody.value === "" || formTitle.value !== "" && formBody.value === "" || formTitle.value === "" && formBody.value !== "") {
+  if (formTitle.value === "" && formBody.value === ""
+  || formTitle.value !== "" && formBody.value === ""
+  || formTitle.value === "" && formBody.value !== "") {
     saveButton.classList.add("lighter-color")
     saveButton.disabled = true
   } else {
     saveButton.classList.remove("lighter-color")
     saveButton.disabled = false
-    console.log("not disabled");
   }
 }
-
-miniIdeaBox.addEventListener("click", deleteIdea);
 
 function deleteIdea(event) {
   var id = parseInt(event.target.id);
@@ -78,52 +78,25 @@ function deleteIdea(event) {
     for (var i = 0; i < userIdeas.length; i++) {
       if (userIdeas[i].id === id) {
         userIdeas.splice(i, 1);
-        //miniIdeaBox.innerHTML = "";
       }
       event.target.closest(".mini-idea-box").remove();
     }
   }
 }
-//sadasd
-
-//Working on this section below:
-
-
-
-// miniIdeaBox.addEventListener("click", activateStar);
-miniIdeaBox.addEventListener("click", activateStar);
 
 function activateStar() {
   var id = parseInt(event.target.id);
   if (event.target.classList.contains("star")) {
-    console.log("star clicked");
     for (var i = 0; i < userIdeas.length; i++) {
-      console.log("in the loop");
       if (userIdeas[i].isStarred === false && userIdeas[i].id === id) {
-        console.log("isStarted ==== true");
-        console.log("userid", userIdeas[i].id);
-        console.log(id);
         event.target.src = redStar
         newIdea.updateIdea()
         favoriteIdeas.push(userIdeas)
       } else if (userIdeas[i].isStarred === true && userIdeas[i].id === id){
         event.target.src = whiteStar
-        console.log('splice');
         newIdea.updateIdea()
         favoriteIdeas.splice(i, 1);
-
       }
     }
-  }
-}
-
-function deleteFavoritedIdeas(event) {
-  var id = parseInt(event.target.id)
-  if (event.target.classList.contains("star")) {
-    for (var i = 0; i < favoriteIdeas.length; i++)
-      if (favoriteIdeas[i].id === userIdeas.id) {
-        console.log('im working')
-        favoriteIdeas.splice(i, 1)
-      }
   }
 }
