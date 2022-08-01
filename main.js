@@ -3,7 +3,7 @@ var userIdeas = []
 var favoriteIdeas = []
 var whiteStar = "./assets/star.svg"
 var redStar = "./assets/star-active.svg"
-var newIdea;
+var newIdea
 
 // formInputs
 var titleBody = document.getElementById('title-body')
@@ -20,9 +20,9 @@ var searchButton = document.querySelector("#search-button")
 // event listener
 window.addEventListener('load', disableButton)
 saveButton.addEventListener('click', displayIdea)
-titleBody.addEventListener('input', disableButton);
-miniIdeaBox.addEventListener("click", deleteIdea);
-miniIdeaBox.addEventListener("click", activateStar);
+titleBody.addEventListener('input', disableButton)
+miniIdeaBox.addEventListener("click", deleteIdea)
+miniIdeaBox.addEventListener("click", activateStar)
 
 //functions
 function displayIdea() {
@@ -77,9 +77,9 @@ function deleteIdea(event) {
   if (event.target.classList.contains("delete")) {
     for (var i = 0; i < userIdeas.length; i++) {
       if (userIdeas[i].id === id) {
-        userIdeas.splice(i, 1);
+        userIdeas.splice(i, 1)
       }
-      event.target.closest(".mini-idea-box").remove();
+      event.target.closest(".mini-idea-box").remove()
     }
   }
 }
@@ -95,7 +95,7 @@ function activateStar() {
       } else if (userIdeas[i].isStarred === true && userIdeas[i].id === id){
         event.target.src = whiteStar
         newIdea.updateIdea()
-        favoriteIdeas.splice(i, 1);
+        favoriteIdeas.splice(i, 1)
       }
     }
   }
