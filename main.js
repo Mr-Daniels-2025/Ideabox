@@ -3,7 +3,7 @@ var userIdeas = []
 var favoriteIdeas = []
 var whiteStar = "./assets/star.svg"
 var redStar = "./assets/star-active.svg"
-
+var newIdea;
 
 // formInputs
 var titleBody = document.getElementById('title-body')
@@ -17,19 +17,20 @@ var showStarredButton = document.querySelector("#show-ideas-button")
 var saveButton = document.querySelector("#form-save")
 var searchButton = document.querySelector("#search-button")
 
-var newIdea;
-
-//disableButton()
 // event listener
 window.addEventListener('load', disableButton)
-saveButton.addEventListener('click', saveIdea)
+saveButton.addEventListener('click', displayIdea)
 titleBody.addEventListener('input', disableButton);
 
 //functions
-function saveIdea() {
-  //inputValues()
+function displayIdea() {
   newIdea = new Idea(formTitle.value, formBody.value)
   userIdeas.push(newIdea)
+  renderNewIdea()
+  clearForm()
+}
+
+function renderNewIdea(){
   miniIdeaBox.innerHTML = ''
   for (var i = 0; i < userIdeas.length; i++) {
     miniIdeaBox.innerHTML += `
@@ -48,15 +49,16 @@ function saveIdea() {
     </section>
   </article>`
   }
-  clearForm()
-  saveButton.disabled = true;
-  saveButton.classList.add("lighter-color")
 }
+
+
+
 
 function clearForm() {
   formTitle.value = ""
   formBody.value = ""
-  //    saveButton.disabled = true
+  saveButton.disabled = true;
+  saveButton.classList.add("lighter-color")
 }
 
 function disableButton() {
