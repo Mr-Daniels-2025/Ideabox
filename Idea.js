@@ -6,7 +6,6 @@ class Idea {
     this.isStarred = false
   }
   updateIdea() {
-    // use the updated svg logic to change the boolean value
     if (!this.isStarred) {
       this.isStarred = true
     } else {
@@ -14,7 +13,3 @@ class Idea {
     }
   }
 }
-// function inputValues(){
-//   var newIdea = new Idea(formTitle.value, formBody.value)
-//   userIdeas.push(newIdea)
-// }
